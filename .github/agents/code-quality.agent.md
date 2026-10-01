@@ -49,8 +49,6 @@ your first duty when refactoring is to prove the numbers did not move.
   supersedes in the same change (or list it explicitly as follow-up). Legacy and
   scratch folders are fenced: nothing outside them may import from them.
 
-- **Shyft questions go to the Shyft Expert.** Do not state Shyft API facts from memory; hand off or ask it to check the source.
-
 ## Python baseline
 
 - Lint and format with `ruff` (`ruff check`, `ruff format`); type-check public

@@ -571,7 +571,7 @@ def main() -> int:
     sub.add_parser("init").set_defaults(fn=cmd_init)
     h = sub.add_parser("hook")
     h.add_argument("event", choices=["prompt", "guard", "post-edit", "stop"])
-    h.add_argument("--role", choices=["prover", "audit"], default="prover")
+    h.add_argument("--role", choices=["prover", "lead", "audit"], default="prover")
     h.set_defaults(fn=cmd_hook)
     args = p.parse_args()
     return args.fn(args)

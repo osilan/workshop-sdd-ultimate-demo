@@ -1,6 +1,6 @@
 ---
 name: 'DevOps'
-description: 'DevOps specialist for research and Lean projects: secure CI/CD on GitHub Actions and GitLab CI, reproducible environments (lake, pip/uv, containers), GitLab-to-GitHub mirroring, release tags, and safe automation around Sigma2 - least privilege and pinned dependencies by default.'
+description: 'DevOps specialist for research and Lean projects: secure CI/CD on GitHub Actions and GitLab CI, reproducible environments (lake, pip/uv, containers), GitLab-to-GitHub mirroring, release tags - least privilege and pinned dependencies by default.'
 argument-hint: 'A pipeline to create or fix, an environment to pin, a release or mirror task'
 tools: ['read', 'search', 'edit', 'execute', 'todo', 'web/fetch']
 ---
@@ -52,8 +52,9 @@ proofs pass belongs to the Lean Prover.
   `lake build`, `lake test` if defined.
 - Fail the job on any new `sorry` outside the obligations file (grep gate) and
   on warnings if the project has opted in.
-- Path dependencies (`require ... from "../x"`) do not work in CI; switch to a
-  git dependency pinned to a tag or commit, and note it in the change.
+- Path dependencies outside the repository (`require ... from "../x"`) do not
+  work in CI; vendor the dependency into the repository or switch to a git
+  dependency pinned to a tag or commit, and note it in the change.
 
 ## Research Python projects
 
@@ -61,14 +62,6 @@ proofs pass belongs to the Lean Prover.
   it and runs `ruff`, the type checker, and `pytest -m "not slow and not dtss"`.
 - Results regeneration as a separate, manual job that writes artifacts with
   checksums; never commit large outputs, archive them (for example Zenodo).
-
-## Sigma2 boundary
-
-- CI never holds Sigma2 credentials, kubeconfigs, or SSH keys. Remote runs are
-  launched by a human (or the Sigma2 Runner agent in the user's session) and CI
-  only validates code and manifests.
-- Container images for Sigma2 are built in CI, pinned by digest, and the digest
-  is recorded in the run manifest.
 
 ## Git, releases, mirrors
 

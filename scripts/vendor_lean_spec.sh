@@ -26,6 +26,5 @@ repository and Copilot can read the source. Removed from the archive:
 \`.gitignore\`, \`.gitlab-ci.yml\`. Nothing else is changed; do not edit files here.
 Update with \`scripts/vendor_lean_spec.sh <tag>\`.
 MD
-sed -i.bak -E "s/^-- Vendored release .*/-- Vendored release $tag (commit ${commit:0:8}), so agents can read the source./" "$root/lakefile.lean" && rm -f "$root/lakefile.lean.bak"
 (cd "$root" && lake update && lake build LeanSpec)
 echo "vendored open-lean-spec $tag ($commit)"
