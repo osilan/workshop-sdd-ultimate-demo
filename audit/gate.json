@@ -1,0 +1,21 @@
+{
+  "lean_roots": null,
+  "exclude_dirs": [
+    ".lake",
+    "open-lean-spec"
+  ],
+  "obligations": [],
+  "allow": {},
+  "test_cmd": null,
+  "frozen": [],
+  "protected": [
+    ".github/hooks",
+    ".github/workflows",
+    "audit/baseline.json",
+    "audit/fingerprint.tsv",
+    "audit/gate.json",
+    "open-lean-spec",
+    "scripts/gate.py"
+  ],
+  "stop_retries": 3
+}
