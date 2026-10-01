@@ -5,7 +5,11 @@
     "open-lean-spec"
   ],
   "obligations": [],
-  "allow": {},
+  "allow": {
+    "native_decide": [
+      "MortgageCalculator/Design.lean"
+    ]
+  },
   "test_cmd": null,
   "frozen": [],
   "protected": [
