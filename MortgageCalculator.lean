@@ -1,2 +1,3 @@
 import MortgageCalculator.Requirements
 import MortgageCalculator.Design
+import MortgageCalculator.Model

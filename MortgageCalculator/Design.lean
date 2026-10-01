@@ -114,7 +114,7 @@ public def visualizationDesign : DesignUnit := {
   ], by native_decide⟩
   theorems := #[
     ⟨"MortgageModel.amortizationPrincipalConserved", by native_decide⟩,
-    ⟨"MortgageModel.annuityPaymentDecreasesWithLongerTerm", by native_decide⟩
+    ⟨"MortgageModel.annuityPaymentZeroRateLongerTermExample", by native_decide⟩
   ]
 }
 

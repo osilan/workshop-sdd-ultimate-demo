@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "kind": "annuityZeroRate",
+      "principalOre": 90000000,
+      "termMonths": 360,
+      "expectedPaymentOre": 250000
+    },
+    {
+      "kind": "loanToValue",
+      "loanOre": 90000000,
+      "propertyValueOre": 100000000,
+      "limitPercent": 90,
+      "expectedWithin": true
+    },
+    {
+      "kind": "debtToIncome",
+      "totalDebtOre": 90000000,
+      "annualIncomeOre": 18000000,
+      "multiple": 5,
+      "expectedWithin": true
+    }
+  ]
+}
